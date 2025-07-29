@@ -1,0 +1,553 @@
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ffa502;
+    --dark-color: #2f3542;
+    --light-color: #f1f2f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.header-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: #ddd;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    position: relative;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-link i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-text {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link:hover i {
+    color: white;
+}
+
+.nav-link:hover .nav-text {
+    opacity: 1;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 1.2), rgba(0, 0, 0, 0)), url(images/hero.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    color: white;
+    padding: 100px;
+    height: 110%;
+    width: 100%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 600px;
+    animation: fadeIn 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-btn {
+    background-color: #4a4949;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.4s ease;
+}
+
+.hero-btn:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+/* Dishes Section */
+.dishes-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 0;
+}
+
+.dish-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.dish-card:nth-child(1) { animation-delay: 0.1s; }
+.dish-card:nth-child(2) { animation-delay: 0.2s; }
+.dish-card:nth-child(3) { animation-delay: 0.3s; }
+.dish-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.dish-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.dish-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dish-card:hover .dish-img img {
+    transform: scale(1.1);
+}
+
+.dish-info {
+    padding: 20px;
+}
+
+.dish-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.dish-info p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.add-to-cart {
+    background-color: #000;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: 500;
+}
+
+.add-to-cart:hover {
+    background-color: white;
+    color: #000;
+    border-color: #000;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--dark-color);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    margin: 0 20px;
+}
+
+/* Move carousel control icons outside the dish carousel for #dishesCarousel */
+#dishesCarousel .carousel-control-prev {
+    left: -80px; /* Move further left from the carousel */
+    right: auto;
+}
+
+#dishesCarousel .carousel-control-next {
+    right: -80px; /* Move further right from the carousel */
+    left: auto;
+}
+
+@media (max-width: 991px) {
+    #dishesCarousel .carousel-control-prev,
+    #dishesCarousel .carousel-control-next {
+       display: none !important;
+    }
+}
+
+/* Order Plates Section */
+.order-plates {
+    padding: 80px 0;
+    background:black;
+}
+
+.order-items-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.item-name {
+    font-weight: 500;
+    flex: 1;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.quantity-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.remove-item {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+.order-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    text-align: right;
+}
+
+/* Title Section */
+.title-section {
+    padding: 80px 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%), url(images/image001211.jpg);
+    color: white;
+    text-align: center;
+}
+
+.title-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.title-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%), url(images/photo-1551183053-bf91a1d81141.avif);
+    color: white;
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 0;
+}
+
+.contact-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-logo img {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-links h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h4::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Make the Bootstrap navbar toggler icon white */
+.navbar-toggler .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .dish-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .title-section h2 {
+        font-size: 2rem;
+    }
+    
+    .title-section p {
+        font-size: 1rem;
+    }
+    
+    .nav-link {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .nav-text {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand img {
+        height: 80px;
+    }
+    
+    .dish-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .nav-link {
+        margin: 0 5px;
+    }
+}
