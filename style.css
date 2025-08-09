@@ -344,15 +344,31 @@ header {
     text-align: right;
 }
 
-/* Title Section */
-.title-section {
+/* About Section - Fullscreen with Gradient Overlay */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;        
+    width: 100%;              
     padding: 80px 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%), url(images/image001211.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
+    margin: 0;
     text-align: center;
+    color: white;
+
+    /* Background image with gradient */
+    background: linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.8)
+    ), 
+    url('images/image001211.jpg');
+
+    background-size: cover;    
+    background-repeat: no-repeat;
+    background-position: center; 
 }
+
 
 .title-section h2 {
     font-size: 2.5rem;
@@ -401,6 +417,94 @@ header {
     color: white;
     margin-bottom: 5px;
     display: block;
+}
+
+/* login-section */
+.login-section {
+    padding: 80px 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%), url(images/photo-1551183053-bf91a1d81141.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.login-section h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.login-section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 0;
+}
+
+.login-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Signup-section */
+.signup-section {
+    padding: 80px 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%), url(images/photo-1551183053-bf91a1d81141.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.signup-section h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.signup-section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 0;
+}
+
+.signup-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Add this to your style.css */
+#signup-form {
+    display: none;
+}
+
+.login-form .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -555,3 +659,4 @@ footer {
         margin: 0 5px;
     }
 }
+
