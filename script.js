@@ -221,10 +221,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-// Smooth scroll for anchor links
-document.getElementById('show-signup').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('signup-section').style.display = 'block';
-    document.getElementById('signup-section').scrollIntoView({ behavior: 'smooth' });
-});

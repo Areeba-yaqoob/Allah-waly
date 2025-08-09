@@ -53,6 +53,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">
+                                <!-- <i class="fas fa-sign-in-alt"></i> -->
                                 <span class="nav-text btn btn-outline-light">Login / Signup</span>
                             </a>
                         </li>
@@ -72,54 +73,41 @@
     </section>
     </div>
 
-    <!-- Login / Signup Section -->
-    <section class="login-section" id="login-section">
+    <!-- Signup Section -->
+    <section class="signup-section" id="signup-section">
     <div class="container">
         <div class="row">
-            <!-- Login Form -->
-            <div class="col-md-6">
-                <h2>Login</h2>
-                <form class="login-form">
+            <!-- Signup Form -->
+            <div class="col-md-6" id="signup-section">
+                <h2>Sign Up</h2>
+                <form class="signup-form">
                     <div class="form-group mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
+                        <label for="signup-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="signup-email" placeholder="abc@example.com" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        <label for="signup-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="signup-password" placeholder="Create a password" required>
                     </div>
-                    <div class="form-group mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="remember">
-                        <label class="form-check-label" for="remember">Remember Me</label>
+                    <div class="form-group mb-3">
+                        <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm your password" required>
                     </div>
                     <div class="form-group text-end">
+                        <!-- <button type="submit" class="btn btn-dark">
+                            <i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;Sign Up
+                        </button> -->
                         <button type="submit" class="btn btn-dark">
-                            <i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Login
+                        <a class="nav-link" href="login.html">
+                                <span class="fa-solid fa-user-plus">&nbsp;Sign up</span>
+                         </a>
                         </button>
                     </div>
                 </form>
             </div>
-
-            <!-- Info Section -->
-            <div class="col-md-6">
-                <h2 class="my-3">Welcome Back</h2>
-                <p class="mx-5">
-                    Log in to access your account and enjoy personalized features at 
-                    <strong>Allah Waly Food House</strong>. Whether you're placing a quick order, checking past purchases, 
-                    or managing your profile, we make it simple and secure. Don’t have an account yet? 
-                    <a href="signup.html#signup-section" class="text-decoration-none">Sign up here</a> 
-                    to unlock exclusive deals and updates.
-                </p>
-            </div>
         </div>
     </div>
 </section>
-
-
-            </div>
-        </div>
-    </div>
-    </section>
 
     <!-- Footer -->
     <footer>
