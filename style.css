@@ -528,6 +528,7 @@ header {
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
+    color: #000;
 }
 
 .login-section h2::after, .signup-section h2::after {
@@ -739,18 +740,12 @@ footer {
         margin-bottom: 30px;
     }
 
-    .contact-section{
-        padding: 5px 0;
-        color: black;
-    }
-
-    .about-section {
-        padding: 5px 0; 
-        color: black;
-    }
-
-    .login-section, .signup-section {
-        padding:5px 0;
+    .contact-section,
+    .about-section,
+    .login-section,
+    .signup-section {
+        padding-top: 0;
+        padding-bottom: 30px;
         color: black;
     }
 }
@@ -790,18 +785,12 @@ footer {
         font-size: 1rem;
     }
 
-    .contact-section{
-        padding: 5px 0;
-        color: black;
-    }
-
-    .about-section {
-        padding: 5px 0;
-        color: black;
-    }
-
-    .login-section, .signup-section {
-        padding:5px 0;
+    .contact-section,
+    .about-section,
+    .login-section,
+    .signup-section {
+        padding-top: 0;
+        padding-bottom: 25px;
         color: black;
     }
 }
@@ -813,11 +802,11 @@ footer {
     
     .hero h1 {
         font-size: 2rem;
-        margin-right:50px;
+        margin-right: 0;
     }
     
     .hero h2 {
-        font-size: 0.5rem;
+        font-size: 1.5rem;
     }
 
     .navbar-brand img {
@@ -832,23 +821,12 @@ footer {
         margin: 0 5px;
     }
 
-    .contact-section{
-        padding: 5px 0;
+    .contact-section,
+    .about-section,
+    .login-section,
+    .signup-section {
+        padding-top: 0;
+        padding-bottom: 20px;
         color: black;
     }
-
-    .about-section {
-        padding: 5px 0;
-        color: black;
-    }
-
-    .login-section, .signup-section {
-        padding:5px 0;
-        color: black;
-    }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {   
-    width: 10px;
 }
