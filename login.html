@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allah Waly Food House</title>
+    <title>Login - Allah Waly Food House</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 1.2), rgba(0, 0, 0, 0)), url(images/hero.png);
+    background-repeat: no-repeat;
+    background-position:right;
+    color: white;
+    padding: 100px;
+    height: 70%;
+    width: 100%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    max-width: 600px;
+    animation: fadeIn 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    animation: fadeIn 1.2s ease;
+}
+    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -65,60 +92,40 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1 class="text-align-left">Allah Waly Food House</h1>
-            <p class="text-align-left justify-content-center">Experience the finest culinary delights prepared by our expert chefs using only the freshest ingredients. Our menu features a perfect blend of traditional flavors and modern techniques.</p>
-            <a href="index.html#dishes-section" class="btn hero-btn btn-lg">Visit Menu</a>
+            <h1 class="text-align-left">Login / Signup</h1>
         </div>
     </section>
     </div>
 
-    <!-- Login / Signup Section -->
+    <!-- Login Section -->
     <section class="login-section" id="login-section">
-    <div class="container">
-        <div class="row">
-            <!-- Login Form -->
-            <div class="col-md-6">
-                <h2>Login</h2>
-                <form class="login-form">
-                    <div class="form-group mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                    </div>
-                    <div class="form-group mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="remember">
-                        <label class="form-check-label" for="remember">Remember Me</label>
-                    </div>
-                    <div class="form-group text-end">
-                        <button type="submit" class="btn btn-dark">
-                            <i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Login
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Info Section -->
-            <div class="col-md-6">
-                <h2 class="my-3">Welcome Back</h2>
-                <p class="mx-5">
-                    Log in to access your account and enjoy personalized features at 
-                    <strong>Allah Waly Food House</strong>. Whether you're placing a quick order, checking past purchases, 
-                    or managing your profile, we make it simple and secure. Don’t have an account yet? 
-                    <a href="signup.html#signup-section" class="text-decoration-none">Sign up here</a> 
-                    to unlock exclusive deals and updates.
-                </p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Login Form -->
+                <div class="col-md-6">
+                    <h2>Login</h2>
+                    <form class="login-form">
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
+                        </div>
+                        <div class="form-group mb-3 password-field">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('password')"></i>
+                        </div>
+                        <div class="form-group text-end">
+                            <button type="submit" class="login-btn btn btn-dark">
+                                <i class=" fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Login
+                            </button>
+                        </div>
+                        <div class="signup-link">
+                            <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-            </div>
-        </div>
-    </div>
     </section>
 
     <!-- Footer -->
@@ -141,10 +148,10 @@
                     <div class="footer-links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#"><i class="fas fa-home me-2"></i>Home</a></li>
-                            <li><a href="#dishes-section"><i class="fas fa-utensils me-2"></i>Menu</a></li>
-                            <li><a href="#title-section"><i class="fas fa-info-circle me-2"></i>About</a></li>
-                            <li><a href="#contact-section"><i class="fas fa-envelope me-2"></i>Contact Us</a></li>
+                            <li><a href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                            <li><a href="index.html#dishes-section"><i class="fas fa-utensils me-2"></i>Menu</a></li>
+                            <li><a href="about.html"><i class="fas fa-info-circle me-2"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fas fa-envelope me-2"></i>Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -181,7 +188,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
-   
-    
+    <script>
+        function togglePassword(fieldId) {
+            const passwordField = document.getElementById(fieldId);
+            const icon = document.querySelector(`#${fieldId} + .toggle-password`);
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
 </body>
 </html>
