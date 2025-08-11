@@ -179,7 +179,8 @@ header {
 /* Dishes Section */
 .dishes-section {
     padding: 80px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    background-color:white;
+    /* background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)); */
 }
 
 .section-title {
@@ -189,7 +190,7 @@ header {
 
 .section-title h2 {
     font-size: 2.5rem;
-    color: white;
+    color: rgb(0, 0, 0);
     position: relative;
     display: inline-block;
 }
@@ -205,6 +206,7 @@ header {
 }
 
 .dish-card {
+    border: #000000 1px solid;
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -327,14 +329,16 @@ header {
 /* Order Plates Section */
 .order-plates {
     padding: 80px 0;
-    background: linear-gradient(rgba(0, 0, 0, 1.2), rgba(0, 0, 0, 0));
+    /* background: linear-gradient(rgba(0, 0, 0, 3.2), rgba(0, 0, 0, 0)); */
+    background-color: white;
 }
 
 .order-items-container {
-    background-color: rgba(255, 255, 255, 0.1);
+    border-top: #000000 1px solid;    
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .order-item {
@@ -384,16 +388,17 @@ header {
     font-size: 1.2rem;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
-    color: white;
+    border-top: 1px solid black;
+    color: rgb(0, 0, 0);
     text-align: right;
 }
 
 /* About Section */
 .about-section {
     min-height: 70vh;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+    /* background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)); */
     padding: 60px 0;
+    background-color: white;
     color: rgb(0, 0, 0);
 }
 
@@ -425,8 +430,9 @@ header {
 /* Contact Section */
 .contact-section {
     padding: 10px 0;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+    /* background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)); */
     color: rgb(0, 0, 0);
+    background-color: white;
 }
 
 .contact-section h2 {
@@ -502,9 +508,10 @@ header {
 
 /* Login/Signup Sections */
 .login-section, .signup-section {
-    padding: 60px 0;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+    padding: 30px 0;
+    /* background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)); */
     display: flex;
+    background-color: white;
     justify-content: center;
     align-items: center;
     color: white;
@@ -736,6 +743,10 @@ footer {
         font-size: 2.8rem;
     }
     
+    .hero {
+        height:110vh;
+    }
+
     .dish-card {
         margin-bottom: 30px;
     }
@@ -753,6 +764,8 @@ footer {
 @media (max-width: 768px) {
     .hero {
         padding: 80px 20px;
+        height:100vh;
+        margin-bottom:0 !important;
     }
     
     .hero h1 {
@@ -798,16 +811,14 @@ footer {
 @media (max-width: 576px) {
     .hero {
         padding: 60px 15px;
+        height:110vh;
     }
     
     .hero h1 {
-        font-size: 2rem;
+        font-size:0;
         margin-right: 0;
     }
-    
-    .hero h2 {
-        font-size: 1.5rem;
-    }
+
 
     .navbar-brand img {
         height: 80px;
